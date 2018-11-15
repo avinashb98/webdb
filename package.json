@@ -47,6 +47,5 @@
     "grunt-umd": "^2.3.3",
     "load-grunt-tasks": "~3.5.2"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

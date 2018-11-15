@@ -198,8 +198,9 @@ function WebDB(name, options){
 		Object.defineProperty(me, 'del', {
 			get: function(){return function Table_del(){
 				var callback;
-				if (typeof arguments[arguments.length-1] == 'function') {
-					callback = arguments[--arguments.length];
+				var argCount = arguments.length - 1;
+				if (typeof arguments[argCount] == 'function') {
+					callback = arguments[argCount];
 				}
 				return callback ? new Promise(function (resolve){resolve(del.apply(me, arguments));}) : del.apply(me, arguments);
 			};}
